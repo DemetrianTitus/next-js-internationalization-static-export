@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Internationalization Static Export
 
-## Getting Started
+This project is bootstrapped with [Next.js](https://nextjs.org) and demonstrates a static export for an internationalized website. Each page is statically rendered into the `out` folder, ensuring fast and reliable content delivery.
 
-First, run the development server:
+## Static Rendering
+
+- All pages (home, about, contact) are rendered statically.
+- The export is performed at build time and output to the `out` folder.
+- The static parameters include different languages (e.g., "en", "bs", "de") for which pages are generated.
+
+## JSON Translations
+
+- Translations are stored in JSON files located in the `/src/translations` folder.
+- Each page imports its respective translations from these JSON files.
+- During build time, the correct language text is injected into each page based on the URL parameter.
+
+## Language Selector
+
+- The `LanguageSelector` component (in `/src/components/LanguageSelector.tsx`) reads the current language from the URL.
+- Users can change the language using a dropdown menu which triggers a route change, updating the displayed text accordingly.
+- Supported languages are "bs" (default), "en", and "de".
+
+## Build the Project
+
+Before using Docker commands, create a production build to generate the `out` folder:
+
+```bash
+npm run build
+```
+
+## Docker Commands
+
+To build the Docker image and run a container, use the following commands:
+
+- **Build the Docker image**:
+  ```bash
+  docker build -t next-app-demo .
+  ```
+
+- **Run the container**:
+  ```bash
+  docker run -d -p 4400:4400 --name next-app-demo-container next-app-demo
+  ```
+
+## Getting Started (Commands)
+
+Command to run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
