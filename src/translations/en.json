@@ -1,0 +1,19 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Home",
+    "content": "Welcome to the homepage."
+  },
+  "about": {
+    "title": "About",
+    "content": "About us page content."
+  },
+  "contact": {
+    "title": "Contact",
+    "content": "Contact us here."
+  }
+}

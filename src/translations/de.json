@@ -1,0 +1,19 @@
+{
+  "header": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "title": "Startseite",
+    "content": "Willkommen auf der Startseite."
+  },
+  "about": {
+    "title": "Über uns",
+    "content": "Inhalt der Über-uns-Seite."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "content": "Kontaktieren Sie uns hier."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "header": {
+    "home": "Početna",
+    "about": "O nama",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "title": "Početna",
+    "content": "Dobrodošli na početnu stranicu."
+  },
+  "about": {
+    "title": "O nama",
+    "content": "Sadržaj stranice o nama."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "content": "Kontaktirajte nas ovdje."
+  }
+}
