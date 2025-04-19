@@ -8,11 +8,7 @@ export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "bs" }, { lang: "de" }];
 }
 
-export default async function Contact({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function Contact({ params, }: { params: Promise<{ lang: string }>; }) {
   const { lang } = await params;
   let t;
   if (lang === "en") t = enTranslations.contact;
